@@ -1,4 +1,5 @@
 import React from "react"
+import '../assets/css/app.css'
 
 function SideBar() {
     return(
@@ -9,7 +10,7 @@ function SideBar() {
 		
 			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
 				<div className="sidebar-brand-icon">
-					<img class="w-100" src="assets/images/logo-DH.png" alt="Digital House"/>
+					<img className="w-100" src="../assets/images/logo-DH.png" alt="Digital House"/>
 				</div>
 			</a>
 
@@ -43,14 +44,14 @@ function SideBar() {
 			</li>
 
 		
-			<li class="nav-item">
-				<a class="nav-link" href="/">
-					<i class="fas fa-fw fa-table"></i>
+			<li className="nav-item">
+				<a className="nav-link" href="/">
+					<i className="fas fa-fw fa-table"></i>
 					<span>Tables</span></a>
 			</li>
 
 		
-			<hr class="sidebar-divider d-none d-md-block"/>
+			<hr className="sidebar-divider d-none d-md-block"/>
 		</ul>
 
     </div>
