@@ -5,7 +5,7 @@ import ContentRowTop from "./ContentRowTop"
 import Footer from "./Footer"
 
 
-function ContentWrapper(){
+function ContentWrapper() {
     return (
     <div>
         <TopBar />
