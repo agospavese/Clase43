@@ -1,5 +1,6 @@
 import React from "react"
 import '../assets/css/app.css'
+import PropTypes from "prop-types";
 
 function ContentRowMovies(props) {
     const titulo = props.titulos
@@ -12,7 +13,7 @@ function ContentRowMovies(props) {
 
 
     {titulo.map((item, i)=><><div key={item + i} className="col-md-4 mb-4">
-        <div className={colorBorde}>
+        <div className={colorBorde[i]}>
             <div className="card-body">
                 <div className="row no-gutters align-items-center">
                     <div className="col mr-2">
@@ -20,7 +21,7 @@ function ContentRowMovies(props) {
                         <div className="h5 mb-0 font-weight-bold text-gray-800">{cifra[i]}</div>
                     </div>
                     <div className="col-auto">
-                        <i className={icono}></i>
+                        <i className={icono[i]}></i>
                     </div>
                 </div>
             </div>
@@ -36,7 +37,13 @@ function ContentRowMovies(props) {
       
     )
 }
-  
+ 
+ContentRowMovies.propTypes = {
+    titulo: PropTypes.array.isRequired,
+    icono: PropTypes.array.isRequired,
+    cifra: PropTypes.array.isRequired,
+    colorBorde: PropTypes.array.isRequired,
+  };
 
 ContentRowMovies.defaultProps = {
     titulo: "Ingrese un título",
